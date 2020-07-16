@@ -4,10 +4,16 @@ import './index.css';
 import './assets/main.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from 'react-router-dom'
+import { ContextProviderPage } from './pages/ContextPage'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ContextProviderPage>
+        <App />
+      </ContextProviderPage>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
